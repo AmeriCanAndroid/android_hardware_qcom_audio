@@ -328,6 +328,7 @@ static uint32_t adev_get_supported_devices(const struct audio_hw_device *dev)
             AUDIO_DEVICE_OUT_ANC_HEADSET |
             AUDIO_DEVICE_OUT_ANC_HEADPHONE |
 #endif
+#ifdef NOT_DEFINED
 #ifdef QCOM_FM_ENABLED
             AUDIO_DEVICE_OUT_FM |
 #endif
@@ -336,6 +337,7 @@ static uint32_t adev_get_supported_devices(const struct audio_hw_device *dev)
 #endif
 #ifdef QCOM_VOIP_ENABLED
             AUDIO_DEVICE_OUT_DIRECTOUTPUT |
+#endif
 #endif
             AUDIO_DEVICE_OUT_DEFAULT |
             /* IN */
@@ -347,12 +349,14 @@ static uint32_t adev_get_supported_devices(const struct audio_hw_device *dev)
             AUDIO_DEVICE_IN_AUX_DIGITAL |
             AUDIO_DEVICE_IN_BACK_MIC |
             AUDIO_DEVICE_IN_ALL_SCO |
+#ifdef NOT_DEFINED
 #ifdef QCOM_ANC_HEADSET_ENABLED
             AUDIO_DEVICE_IN_ANC_HEADSET |
 #endif
 #ifdef QCOM_FM_ENABLED
             AUDIO_DEVICE_IN_FM_RX |
             AUDIO_DEVICE_IN_FM_RX_A2DP |
+#endif
 #endif
             AUDIO_DEVICE_IN_DEFAULT);
 }
